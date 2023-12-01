@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 
-resource "aws_iam_user" "lb" {
-  name = "loadbalancer"
-  path = "/system/"
+resource "aws_s3_bucket" "workspacesamples3" {
+  bucket = "tfcloudkyn-bucket-${terraform.workspace}"
 }
+  
